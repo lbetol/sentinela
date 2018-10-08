@@ -30,3 +30,9 @@ primary key (code),
 foreign key (rqst) references Requisitions (code)
 )engine=innodb;
 
+create table if not exists report(
+code char   (6),
+rqst char   (6) null,
+text varchar(256),
+primary key (code)
+)engine=innodb;
